@@ -19,6 +19,24 @@ Route::get('/', function () {
 
 Route::group(['namespace' => 'App\Http\Controllers\Movie', 'prefix' => 'movie'],
     function() {
-        Route::resource('movie','MovieController')->names('movie.pages');
+        $methods = ['index', 'edit', 'store', 'update', 'create',];
+        Route::resource('movie','MovieController')->Only($methods)->names('movie.pages');
     });
 
+Route::group(['namespace' => 'App\Http\Controllers\Movie', 'prefix' => 'movie'],
+    function(){
+        $methods = ['index', 'show', 'page',];
+        Route::resource('page','MovieCategoryController')->Only($methods)->names('movie.pages');
+    });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
