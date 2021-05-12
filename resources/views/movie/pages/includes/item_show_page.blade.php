@@ -15,6 +15,9 @@
                                 <label for="title">Заголовок</label>
                                 <h3>{{ $item->title }}</h3>
                             </div>
+                            <div class="img">
+                                <img src="{{ old('img', $item->img) }}" width="320" height="480">
+                            </div>
                             <div class="form-group">
                                 <label for="category_id">Жанр</label>
                                 <h4>{{$item->category->title}}</h4>
@@ -24,9 +27,13 @@
                                 <h5>{{ old('description', $item->description) }}</h5>
                             </div>
                             <div class="form-group">
-                                <label for="link">Ссылка</label>
-                                <br>
-                                <a href={{ old('link', $item->link) }}>Смотреть онлайн</a>
+                                <label for="link">Смотреть онлайн</label>
+                            </div>
+                            <div id="player">
+                                <script src="http://fgsmovie.ddns.net:8585/laravel/public/playerjs.js"></script>
+                                <script language="JavaScript">
+                                    var player = new Playerjs({id:"player", title:"Милый дом", file:"{{ old('link', $item->link) }}"});
+                                </script>
                             </div>
                         </div>
                     </div>

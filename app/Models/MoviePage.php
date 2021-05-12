@@ -14,7 +14,8 @@ class MoviePage extends Model
         'slug',
         'category_id',
         'description',
-        'link'
+        'link',
+        'img'
     ];
 
     public function category()

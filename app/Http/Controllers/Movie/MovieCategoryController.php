@@ -22,7 +22,8 @@ class MovieCategoryController extends Controller
             'title',
             'slug',
             'description',
-            'link'
+            'link',
+            'img'
         ];
 
         $paginator = MoviePage::select($fields)

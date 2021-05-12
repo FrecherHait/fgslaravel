@@ -71,6 +71,14 @@
                                     {{ old('link', $item->link) }}
                                 </textarea>
                             </div>
+                            <div class="form-group">
+                                <label for="img">Ссылка на обложку</label>
+                                <textarea name="img"
+                                          id="img"
+                                          class="form-control">
+                                    {{ old('img', $item->img) }}
+                                </textarea>
+                            </div>
                         </div>
                     </div>
                 </div>

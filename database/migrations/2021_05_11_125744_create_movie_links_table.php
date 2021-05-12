@@ -15,6 +15,7 @@ class CreateMovieLinksTable extends Migration
     {
         Schema::table('movie_pages', function (Blueprint $table) {
             $table->text('link')->create();
+            $table->text('img')->create();
         });
     }
 
