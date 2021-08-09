@@ -5,7 +5,7 @@
     @endphp
 
     @if($item->exists)
-        <form method="POST" action="{{ route('movie.pages.show', $item->id) }}">
+        <form method="POST" action="{{ route('movie.pages.show', $item->slug) }}">
             @method('PATCH')
             @else
                 <form method="POST" action="{{ route('movie.pages.store') }}">

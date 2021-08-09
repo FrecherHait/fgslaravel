@@ -30,7 +30,7 @@
                                 <label for="link">Смотреть онлайн</label>
                             </div>
                             <div id="player">
-                                <script src="http://fgsmovie.ddns.net:8585/laravel/public/playerjs.js"></script>
+                                <script src="https://frechergamestudio.ga/public/playerjs.js"></script>
                                 <script language="JavaScript">
                                     var player = new Playerjs({id:"player", title:"Милый дом", file:"{{ old('link', $item->link) }}"});
                                 </script>

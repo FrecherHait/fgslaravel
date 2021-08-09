@@ -62,7 +62,7 @@ class MovieCategoryController extends Controller
      */
     public function show($id)
     {
-        $item = MoviePage::where('slug','=',$id)->findOrFail($id);
+        $item = MoviePage::where('slug', $id)->findOrFail($id);
         $categoryList = MovieCategory::all();
         return view('movie.pages.page',
             compact('item', 'categoryList'));

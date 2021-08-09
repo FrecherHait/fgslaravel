@@ -23,4 +23,9 @@ class MoviePage extends Model
         //Жанр фильма
         return $this->belongsTo(MovieCategory::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

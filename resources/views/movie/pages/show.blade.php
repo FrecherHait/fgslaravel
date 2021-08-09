@@ -18,9 +18,9 @@
                         @foreach($paginator as $item)
                             @php /** @var \App\Models\MoviePage $item */ @endphp
                             <tr>
-                                <td>{{ $item->id }}</td>
+                                <td>{{ $item->slug }}</td>
                                 <td>
-                                    <a href="{{ route('movie.pages.show', $item->id)}}">{{ $item->title}}</a>
+                                    <a href="{{ route('movie.pages.show', $item->slug)}}">{{ $item->title}}</a>
                                 </td>
                                 <td>
                                     {{ $item->category->title }}
